@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/styles/navbar.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item nav-header">
+               <a href="/">GG</a> 
+            </li>
+            <li class="nav-item">
+                <a href="#" class="search">search</a>
+                <div class="search-drop-container">
+                    <form name="search" action="/product" method="get">
+                    <input name="ssearch" type="search" class="search-bar" placeholder=" Search gizmogroove.com" autofocus>
+                    <input type="submit" class="nav-sub">
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="support">support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="account">myGizmo</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            var maxScroll = $(document).height() - $(window).height();
+            var rotation = (scroll / maxScroll) * 360;
+    
+            rotation = rotation > 360 ? 360 : rotation;
+    
+            $(".nav-header").css({
+                transform: "rotate(" + rotation + "deg)"
+            });
+        });
+    
+        $(".search").on("click", function(){
+            $(".search-drop-container").addClass("search-transition");
+        });
+    
+        $(".nav-sub").on("click",function(){
+            console.log($("input[name='ssearch']").val());
+        });
+    
+        // Exclude .search-drop-container from mouseleave event
+        $(".navbar").on("mouseleave", function() {
+            $(".search-drop-container").removeClass("search-transition");
+        });
+    
+    });
+    </script>
+    
+
+</html>

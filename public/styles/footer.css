@@ -1,0 +1,48 @@
+footer{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left:0px;
+    margin-right: 0px;
+    width:auto;
+    height:5vh;
+    width: 100vw;;
+    background-color:black;
+    text-align: center;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:0;
+    position: absolute;
+    top: 100%;
+    margin-top:2rem;
+}
+
+ul.icons {
+    padding:10px;
+}
+
+ul.icons li {
+    display:inline-block;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 1px;
+}
+
+ul.icons li a {
+    display:block;
+    border-radius:100%;
+    margin:0;
+    padding:0.5em;
+    border: solid 1px white;
+    color:white;
+}
+
+ul.icons li a:hover {
+    background-color: white;
+    color:rgb(13, 12, 12);
+}
+
+ul.icons li:last-child {
+    padding-right: 0;
+}

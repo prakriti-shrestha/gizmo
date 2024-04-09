@@ -1,0 +1,262 @@
+
+/* Styling the area of the slides */
+#slideshow {
+    z-index: -1;
+    overflow: hidden;
+    height: 95vh;
+    width: 100vw;
+    margin: 5vh 0;
+    z-index: -1;
+}
+
+/* Style each of the sides 
+with a fixed width and height */
+.slide {
+    float: left;
+    height: 95vh;
+    width: 100vw;
+}
+
+/* Add animation to the slides */
+.slide-wrapper {
+
+    /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(100vw * 4);
+
+    /* Specify the animation with the
+    duration and speed */
+    animation: slide 50s ease infinite;
+}
+
+.slide{
+    background-color: #54544c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Define the animation 
+for the slideshow */
+@keyframes slide {
+
+    /* Calculate the margin-left for 
+    each of the slides */
+    20% {
+        margin-left: 0px;
+    }
+
+    40% {
+        margin-left: calc(-100vw * 1);
+    }
+
+    60% {
+        margin-left: calc(-100vw * 2);
+    }
+
+    80% {
+        margin-left: calc(-100vw * 3);
+    }
+}
+
+div.bestsellers_main_container{
+    width: auto;
+    height: 500px;
+    z-index: -1;
+}
+
+div.bestsellers_container{
+    margin-bottom: 0px;
+    width:auto;
+    height: 300px;
+    background-color: #FFF;
+    color:#202024;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    padding:0;
+}
+
+.bestsellers_heading{
+    z-index: -1;
+    display: flex;
+    background-color: #FFF;
+    color:black;
+    text-align: center;
+    font-size: 140px;            
+    position:relative;
+    height:200px;
+    align-items: center;
+
+}
+
+div.bestseller{
+    border: solid #54504D 0.2px ;
+    height:300px;
+    width: 150px;
+    flex: 1;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    margin-left: 0;
+
+}
+
+div.bestseller_img{
+    align-items: center;
+}
+
+div.bestseller_info{
+    text-align: center;
+
+}
+
+button.arrow{
+    width: 40px;
+    height: 225px;
+    font-size: 20px;
+}
+
+/*Why gizmo*/
+
+div.why_container{
+    position: relative;
+    top:-20px;
+    margin-top:0;
+    margin-bottom: 0px;
+    width:auto;
+    background-color: #54504D;
+    color: #FFF;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height:700px;
+}
+
+div.why{
+    font-size: 68px;
+ 
+}
+
+.text{
+    font-size: 200px;
+    font-weight: bolder;
+    flex-direction: column;
+    padding:0;
+}
+
+
+div.reason_why{
+    text-align: justify;
+    font-size: 27px;
+
+}
+
+
+
+.today_container{
+    padding:0;
+}
+
+.today_heading{
+    display: flex;
+    justify-content: end;
+}
+.today{
+    background-color: black;
+    color:white;
+
+}
+.text2{
+    position: relative;
+    font-size: 420px;
+    height: 400px;
+    width: 400px;
+    display: inline;
+    top:130px;
+    z-index: 0;
+    font-weight: bold;
+}
+
+.why_header{
+    position: relative;
+    top:-100px
+}
+
+.reason_why{
+    font-style: italic;
+    padding-right:70px;
+}
+
+div.bestsellers_container {
+    margin-bottom: 0;
+    margin-top: 0; 
+    padding: 0;
+}
+
+.links{
+    display: flex;
+    width:200px;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    color:white;
+}
+.card-link{
+    text-decoration: none;
+    color:#2c93f5;
+    font-size: 20px;
+    font-weight: lighter;
+    position: relative;
+}
+.card-pic{
+    height: 60vh;
+}
+.card-container{
+    display:flex;
+    flex-direction: row;
+}
+.spec-card{
+    color:white;
+    font-size:19px;
+    font-size:lighter;
+}
+.spec-list{
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: lighter;
+
+}
+.spec-item{
+    margin-bottom: 10px;
+}
+.nav-link{
+    text-decoration: none;
+    color:white;
+}
+.support-section{
+    font-size:20px;
+    margin-top:0;
+    position: relative;
+    top:-60px;
+}
+
+body::-webkit-scrollbar{
+    width:5px;
+}
+
+body::-webkit-scrollbar-track{
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:white;
+}
