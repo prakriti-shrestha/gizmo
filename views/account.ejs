@@ -8,8 +8,9 @@
     <link href="/styles/account.css" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div> 
     <div class="card-container">
-        <div class="greeting-message">Hi <span class="name">NAME!</span></div>
+        <div class="header">Hi <span class="Name">NAME!</span></div>
         <div class="card">
             <div class="container-1 con">
                 <a class="card-link" href="#">
@@ -21,23 +22,12 @@
                     <div class="container-header">My orders</div>
                     <div class="caption">Track, return, or buy again</div>   
                 </div>
+               
             </a>
 
 
             </div>
                              
-            <div class="container-2 con">
-                <a class="card-link" href="#">
-
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
-                    <path d="M 25 3 C 18.363281 3 13 8.363281 13 15 L 13 20 L 9 20 C 7.355469 20 6 21.355469 6 23 L 6 47 C 6 48.644531 7.355469 50 9 50 L 41 50 C 42.644531 50 44 48.644531 44 47 L 44 23 C 44 21.355469 42.644531 20 41 20 L 37 20 L 37 15 C 37 8.363281 31.636719 3 25 3 Z M 25 5 C 30.566406 5 35 9.433594 35 15 L 35 20 L 15 20 L 15 15 C 15 9.433594 19.433594 5 25 5 Z M 9 22 L 41 22 C 41.554688 22 42 22.445313 42 23 L 42 47 C 42 47.554688 41.554688 48 41 48 L 9 48 C 8.445313 48 8 47.554688 8 47 L 8 23 C 8 22.445313 8.445313 22 9 22 Z M 25 30 C 23.300781 30 22 31.300781 22 33 C 22 33.898438 22.398438 34.6875 23 35.1875 L 23 38 C 23 39.101563 23.898438 40 25 40 C 26.101563 40 27 39.101563 27 38 L 27 35.1875 C 27.601563 34.6875 28 33.898438 28 33 C 28 31.300781 26.699219 30 25 30 Z"></path>
-                </svg>
-                <div class="text">
-                    <div class="container-header">Login & Security</div>
-                    <div class="caption">Edit login, name, and other details </div>   
-                </div>
-                </a>
-            </div>
             <div class="container-3 con">
                 <a class="card-link" href="#">
 
@@ -49,11 +39,94 @@
                 </div>
                 </a>
             </div>
+         
 
         </div>
-   
-    </div>
+        <div class="info-card">
+            <div class="header">CREDENTIALS</div>
+            <br>
+            <div class="user-information">
+                <div class="info">               
+                    <div class="title">Name</div>
+                    <div class="value">hrigdev@gmail.com</div>
 
+                    <form class="item" action="/add" method="post">
+                        <input type="text" name="newItem" placeholder="New Item" autocomplete="off" autofocus="true" />
+                    </form>
+                    <div class="value">
+                        <div class="button"><button onclick="handler()" class="edit">edit</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info">               
+                    <div class="title">Username</div>
+                    <form class="item" action="/add" method="post">
+                        <input hidden="true"  type="text" name="newItem" placeholder="New Item" autocomplete="off" autofocus="true" />
+                    </form>
+                    <div class="value">
+                        <div class="value">hrigdev@gmail.com</div>
+                        <div class="button"><button onclick="handler()" class="edit">edit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">               
+                    <div class="title">Email</div>
+                    <form class="item" action="/add" method="post">
+                        <input hidden="true" type="text" name="newItem" placeholder="New Item" autocomplete="off" autofocus="true" />
+                    </form>
+                    <div class="value">
+                        <div class="value">hrigdev@gmail.com</div>
+                        <div class="button"><button onclick="handler()" class="edit">edit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">               
+                    <div class="title">password</div>
+                    <form class="item" action="/add" method="post">
+                        <input hidden="true" type="text" name="newItem" placeholder="New Item" autocomplete="off" autofocus="true" />
+                    </form>
+                    <div class="value">
+                        <div class="value">hrigdev@gmail.com</div>
+                        <div class="button"><button onclick="handler()" class="edit">edit</button>
+                        </div>
+                    </div>
+                </div>
+        
+        
+    
+            </div>
+        </div>
+    
+    <div class="card-container" id="order-detail-card">
+        <div class="details-card">
+            <div class="current-orders">
+                <div class="card-header">Currrent Orders     
+                <button class="close" name="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M7,4c-0.25587,0 -0.51203,0.09747 -0.70703,0.29297l-2,2c-0.391,0.391 -0.391,1.02406 0,1.41406l7.29297,7.29297l-7.29297,7.29297c-0.391,0.391 -0.391,1.02406 0,1.41406l2,2c0.391,0.391 1.02406,0.391 1.41406,0l7.29297,-7.29297l7.29297,7.29297c0.39,0.391 1.02406,0.391 1.41406,0l2,-2c0.391,-0.391 0.391,-1.02406 0,-1.41406l-7.29297,-7.29297l7.29297,-7.29297c0.391,-0.39 0.391,-1.02406 0,-1.41406l-2,-2c-0.391,-0.391 -1.02406,-0.391 -1.41406,0l-7.29297,7.29297l-7.29297,-7.29297c-0.1955,-0.1955 -0.45116,-0.29297 -0.70703,-0.29297z"></path></g></g>
+                    </svg>
+                </button></div>
+                <div class="order-detail">
+                    <div class="order"></div>
+                </div>
+            </div>
+            <div class="order-history">
+                <div class="card-header">Order History</div>
+                <div class="order-detail">
+                    <div class="order"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </body>
+<script>
+     function handler(id) {
+      document.getElementById("title" + id).setAttribute("hidden", true)
+      document.getElementById("edit" + id).setAttribute("hidden", true)
+      document.getElementById("done" + id).removeAttribute("hidden")
+      document.getElementById("input" + id).removeAttribute("hidden")
+    }
+</script>
 </html>
-<%- include("partials/footer.ejs") %>
