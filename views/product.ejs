@@ -1,22 +1,38 @@
 <%- include("partials/navbar.ejs") %>
+<%- include("partials/footer.ejs") %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Samsung S24</title>
 
     <link href="/styles/product.css" rel="stylesheet">
 
 </head>
 <body>
-    <div class="card-container">
-        <div class="product-card">
-            <div class="product-picture"></div>
-            <div class="product-alternate-pictures"></div>
-            <div class="product-name"></div>
-            <div class="product-description"></div>
-        </div>
+
+  <main>
+    <div class="product">
+      <img src="bs1.png" alt="Product Image">
+      <div class="product-details">
+        <h2>Samsung S24</h2>
+        <p>
+            Octa-Core Processor<br>
+            6.8-inch Dynamic AMOLED 2X display<br>
+            5G connectivity<br>
+            Improved battery life<br>
+            Face ID facial recognition<br>
+            Water and dust resistance (IP68)<br>
+            Available in multiple storage options<br>
+            Updated design with rounded corners
+        </p>
+        <button id="buyNowBtn">Buy Now</button>
+      </div>
     </div>
+  </main>
+
+
+  <script src="product.js"></script>
 </body>
 </html>
