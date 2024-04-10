@@ -1,2 +1,61 @@
 <%- include("partials/navbar.ejs") %>
 <%- include("partials/footer.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Page</title>
+</head>
+<body>
+<main>
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="supportForm" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="query">Query:</label><br>
+        <textarea id="query" name="query" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+<script>
+    // script.js
+
+function submitForm(event) {
+  event.preventDefault(); // Prevent form from submitting normally
+
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const query = document.getElementById('query').value;
+
+  // Simple email validation
+  if (!validateEmail(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Simulate sending form data to server (replace this with your actual form submission)
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Query:', query);
+
+  // Reset form fields
+  document.getElementById('supportForm').reset();
+}
+
+function validateEmail(email) {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
+  </script>
+</body>
+</html>
